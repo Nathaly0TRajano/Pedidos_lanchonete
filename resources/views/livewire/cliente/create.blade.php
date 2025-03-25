@@ -12,6 +12,7 @@
 
         <div class="card-body">
             <form wire:submit.prevent="store" class="row g-3">
+                
                 <div class="mb-3">
                     <label for="nome" class="form-label">Nome</label>
                     <input type="text" class="form-control" id="nome" name="nome"
