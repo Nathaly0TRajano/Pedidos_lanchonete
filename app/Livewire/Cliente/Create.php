@@ -9,7 +9,6 @@ use Livewire\Component;
 
 class Create extends Component
 {
-    public $nome;
     public $email;
     public $password;
     public $endereco;

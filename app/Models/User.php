@@ -12,7 +12,7 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
     const ROLE_ADMIN = 'admin';
-    const ROLE_TEACHER = 'funcionario';
+    const ROLE_FUNCIONARIO = 'funcionario';
     const ROLE_ALUNO = 'cliente';
 
     /**
@@ -55,11 +55,15 @@ class User extends Authenticatable
     }
 
     public function isFuncionario(){
-        return $this->role === self::ROLE_TEACHER;
+        return $this->role === self::ROLE_FUNCIONARIO;
     }
 
     public function cliente(){
         return $this->hasOne(Cliente::class);  
+    }
+
+    public function Funcionario(){
+        return $this->hasOne(Funcionario::class);  
     }
 
 }
